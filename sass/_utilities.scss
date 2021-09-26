@@ -1,0 +1,213 @@
+@mixin reset {
+  html {
+    font-size: 13px;
+    font-family: 'Manrope', sans-serif;
+    background-color: $lightGrayishBlue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 667px;
+
+    @media (min-width: 769px) {
+      width: 1440px;
+      height: 800px;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin card-size {
+  //mobile
+  width: 310px;
+  height: 500px;
+
+  background-color: $white;
+  border-radius: 8px;
+
+  //web
+  @media (min-width: 769px) {
+    width: 730px;
+    height: 280px;
+    border-radius: 10px;
+  }
+}
+
+@mixin banner {
+  background-image: url(/images/drawers.jpg);
+  background-size: cover;
+  border-radius: 8px 8px 0 0;
+
+  width: 100%;
+  height: 205px;
+
+  @media (min-width: 769px) {
+    border-radius: 8px 0 0 8px;
+    width: 800px;
+    height: 280px;
+  }
+}
+
+@mixin title {
+  font-size: 15px;
+  font-weight: 700;
+  color: $darkGrayishBlue;
+
+  padding: 40px 30px 0 30px;
+
+  @media (min-width: 769px) {
+    padding: 35px 30px 10px 30px;
+
+    font-size: 20px;
+  }
+}
+
+@mixin text {
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  line-height: 150%;
+  color: $darkBlue;
+  padding: 20px 30px 25px 30px;
+
+  @media (min-width: 769px) {
+    padding: 10px 30px 20px 30px;
+    font-size: 13px;
+  }
+}
+
+%signature-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+
+  padding: 10px 30px 10px 30px;
+
+  @media (min-width: 769px) {
+    padding: 0 30px 10px 30px;
+  }
+}
+
+%socials-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  padding: 10px 30px 10px 30px;
+  height: 60px;
+  background-color: $darkGrayishBlue;
+  border-radius: 0 0 8px 8px;
+
+  @media (min-width: 769px) {
+    padding: 10px 10px 15px 30px;
+
+    position: relative;
+    bottom: 120px;
+    right: -165px;
+    width: 250px;
+    border-radius: 8px;
+    height: 55px;
+  }
+
+  p {
+    color: $grayishBlue;
+    letter-spacing: 5px;
+
+    @media (min-width: 769px) {
+      margin-right: 20px;
+    }
+  }
+
+  i {
+    font-size: 22px;
+  }
+}
+
+%socials-links {
+  width: 100px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 769px) {
+    width: 150px;
+  }
+
+  i {
+    font-size: 22px;
+    color: $white;
+  }
+}
+
+%picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+%share {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $lightGrayishBlue;
+
+  cursor: pointer;
+
+  @media (min-width: 769px) {
+    background-color: $darkBlue;
+  }
+
+  .fas.fa-reply {
+    transform: scaleX(-1);
+    color: $darkBlue;
+    font-size: 16px;
+
+    @media (min-width: 769px) {
+      color: $white;
+    }
+  }
+}
+
+%close {
+  width: 20px;
+  height: 20px;
+
+  .fas.fa-times {
+    display: none;
+    color: $darkBlue;
+    font-size: 12px;
+
+    @media (min-width: 769px) {
+      display: flex;
+    }
+  }
+}
+
+@mixin footer {
+  margin-top: 20px;
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: $link;
+  }
+}

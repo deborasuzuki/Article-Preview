@@ -1,0 +1,109 @@
+@import 'variables';
+@import 'utilities';
+
+@include reset;
+
+.card {
+  @include card-size;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 769px) {
+    flex-direction: row;
+  }
+
+  .banner {
+    @include banner;
+  }
+
+  .article {
+    @include center;
+
+    @media (min-width: 769px) {
+      padding: 0;
+      justify-content: flex-start;
+    }
+
+    &__title {
+      @include title;
+    }
+
+    &__text {
+      @include text;
+    }
+
+    &__signature {
+      @extend %signature-section;
+      //   display: none;
+
+      &--picture {
+        @extend %picture;
+      }
+
+      &--name {
+        .name {
+          @include title;
+          font-size: 13px !important;
+          padding: 0;
+          margin: 0 50px 0 0;
+
+          @media (min-width: 769px) {
+            padding: 0;
+
+            margin: 0 80px 0 0;
+          }
+        }
+
+        .date {
+          @include text;
+          padding: 0;
+
+          margin-bottom: 0;
+          color: $grayishBlue;
+
+          @media (min-width: 769px) {
+            padding: 0;
+          }
+        }
+      }
+
+      &--share {
+        @extend %share;
+        @include center;
+      }
+    }
+
+    &__socials {
+      @extend %socials-section;
+      display: none;
+
+      &--links {
+        @extend %socials-links;
+      }
+
+      &--share {
+        @extend %share;
+        @include center;
+        background-color: $darkBlue;
+
+        .fas.fa-reply {
+          transform: scaleX(-1);
+          color: $white;
+          font-size: 16px;
+        }
+
+        @media (min-width: 769px) {
+          display: none;
+        }
+      }
+
+      &--close {
+        @extend %close;
+      }
+    }
+  }
+}
+
+.attribution {
+  @include footer;
+}
