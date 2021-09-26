@@ -79,7 +79,7 @@
 }
 @media (min-width: 769px) {
   .card .article__socials--share, .card .article__signature--share {
-    background-color: #6d7f97;
+    background-color: #ecf2f8;
   }
 }
 .card .article__socials--share .fas.fa-reply, .card .article__signature--share .fas.fa-reply {
@@ -89,7 +89,7 @@
 }
 @media (min-width: 769px) {
   .card .article__socials--share .fas.fa-reply, .card .article__signature--share .fas.fa-reply {
-    color: white;
+    color: #6d7f97;
   }
 }
 

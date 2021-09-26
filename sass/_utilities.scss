@@ -173,7 +173,7 @@
   cursor: pointer;
 
   @media (min-width: 769px) {
-    background-color: $darkBlue;
+    background-color: $lightGrayishBlue;
   }
 
   .fas.fa-reply {
@@ -182,7 +182,7 @@
     font-size: 16px;
 
     @media (min-width: 769px) {
-      color: $white;
+      color: $darkBlue;
     }
   }
 }
