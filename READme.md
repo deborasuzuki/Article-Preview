@@ -26,4 +26,4 @@ HTML, Scss and JavaScript Vanilla, using the concept of mobile first.
 
 See in:<a href="https://ds-articlepreview.netlify.app/"> Article Preview</a>
 
-![project_view](https://github.com/deborasuzuki/Single-Price-Grid/blob/project_view.png?raw=true)
+![project_view](https://github.com/deborasuzuki/Article-Preview/blob/main/Project%20View.png)
